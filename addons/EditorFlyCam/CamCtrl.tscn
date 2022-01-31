@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://addons/EditorFlyCam/CamCtrl.gd" type="Script" id=1]
+
+[node name="CamCtrl" type="VBoxContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FollowEditor" type="CheckButton" parent="."]
+margin_right = 1024.0
+margin_bottom = 40.0
+hint_tooltip = "Copy the transform from the editor camera to the selected camera"
+text = "Follow Editor Camera"
+
+[connection signal="toggled" from="FollowEditor" to="." method="_on_FollowEditor_toggled"]
